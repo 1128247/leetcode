@@ -1,0 +1,6 @@
+import { ListNode } from "./Node";
+
+function deleteNode(node: ListNode | null): void {
+  node!.val = node!.next!.val;
+  node!.next = node!.next!.next;
+};
