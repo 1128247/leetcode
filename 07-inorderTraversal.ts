@@ -1,15 +1,4 @@
-
-class TreeNode {
-  val: number
-  left: TreeNode | null
-  right: TreeNode | null
-  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-    this.val = (val === undefined ? 0 : val)
-    this.left = (left === undefined ? null : left)
-    this.right = (right === undefined ? null : right)
-  }
-}
-
+import { TreeNode } from "./TreeNode";
 
 function inorderTraversal(root: TreeNode | null): number[] {
   const arr: Array<number> = [];
@@ -24,6 +13,3 @@ function dfs(arr: number[], root: TreeNode) {
   arr.push(root.val);
   dfs(arr, root.right!);
 }
-
-
-export { TreeNode };
